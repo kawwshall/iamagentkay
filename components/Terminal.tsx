@@ -66,10 +66,6 @@ export function Terminal() {
       onClick={focus}
       className="min-h-screen w-full px-4 sm:px-8 py-6 sm:py-10 max-w-4xl mx-auto animate-flicker"
     >
-      <div className="mb-4 text-term-dim text-xs">
-        {profile.handle}.sh // last login: {new Date().toDateString().toLowerCase()}
-      </div>
-
       <div className="mb-5">{welcome}</div>
 
       <nav aria-label="Quick commands" className="mb-7 flex flex-wrap gap-2">

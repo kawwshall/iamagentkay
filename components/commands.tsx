@@ -9,48 +9,21 @@ const line = (s: ReactNode, key?: string | number) => (
   </div>
 );
 
-const signalHeights = [28, 44, 72, 36, 58, 88, 48, 66, 32, 78, 52, 94, 42, 62, 84, 38, 70, 50, 90, 46, 76, 34, 60, 82];
-
-const signal = (
-  <div className="signal-shell" aria-label="A live animated signal moving from curiosity through work into art">
-    <div className="signal-status">
-      <span className="signal-dot" aria-hidden="true" />
-      signal / unstable but alive
-    </div>
-    <div className="signal-bars" aria-hidden="true">
-      {signalHeights.map((height, index) => (
-        <span
-          key={`${height}-${index}`}
-          className="signal-bar"
-          style={{ height: `${height}%`, animationDelay: `-${index * 83}ms` }}
-        />
-      ))}
-    </div>
-    <div className="signal-readout">
-      <span>input / curiosity</span>
-      <span>process / work</span>
-      <span>output / art</span>
-    </div>
-  </div>
-);
-
 export const welcome: CommandResult = (
-  <div className="space-y-3">
-    {signal}
-    <div>
-      <span className="text-term-fg">{profile.name.toLowerCase()}</span>
-      <span className="text-term-dim"> / {profile.title}</span>
-    </div>
-    <div className="max-w-2xl text-term-fg/90">{profile.tagline}</div>
-    <div className="max-w-2xl text-term-dim">
-      no grand theory. no polished origin story. just work, repetition and whatever survives both.
-    </div>
-    <div className="text-term-dim">
-      passion follows art. obsession follows repetition. the rest is noise.
-    </div>
-    <div className="text-term-dim text-sm">
-      delusions of grandeur: active. evidence: loading. type <span className="text-term-amber">help</span> or pick a route.
-    </div>
+  <div className="welcome-copy">
+    <div className="text-term-accent text-sm tracking-[0.16em] uppercase">agent kay</div>
+    <h1 className="text-term-fg text-2xl sm:text-3xl leading-tight font-normal max-w-3xl">
+      {profile.tagline}
+    </h1>
+    <p>
+      that has been the pattern so far. i have moved through coffee, theatre, code, field operations and now jazz, and none of it was planned particularly well. i usually enter because i am curious, stay because the work starts getting interesting, and then build something because i cannot stop thinking about how badly the current thing works.
+    </p>
+    <p>
+      i still believe passion follows art. you do the work first, often badly, and somewhere in the middle it begins to matter. right now i am in goa, learning jazz, building whatever keeps bothering me and holding on to a few delusions of grandeur because life is boring without them.
+    </p>
+    <p className="text-term-dim text-sm">
+      you can click around if you want, or type <span className="text-term-amber">help</span>. it is just a website. nothing sacred here.
+    </p>
   </div>
 );
 

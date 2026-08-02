@@ -16,76 +16,15 @@ button { cursor: pointer; }
 
 :focus-visible { outline-offset: 3px; }
 
-.signal-shell {
-  border: 1px solid rgba(57, 255, 136, 0.25);
-  border-left: 3px solid #39ff88;
-  background:
-    linear-gradient(90deg, rgba(57, 255, 136, 0.055), transparent 55%),
-    rgba(0, 0, 0, 0.18);
-  padding: 0.8rem 0.9rem 0.65rem;
-  max-width: 46rem;
-  overflow: hidden;
-}
-
-.signal-status {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: rgba(200, 245, 200, 0.55);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.signal-dot {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 999px;
-  background: #39ff88;
-  box-shadow: 0 0 0.8rem rgba(57, 255, 136, 0.9);
-  animation: signalBlink 1.15s steps(2, end) infinite;
-}
-
-.signal-bars {
-  height: 6.5rem;
-  display: flex;
-  align-items: center;
-  gap: clamp(0.18rem, 0.8vw, 0.42rem);
-  margin: 0.65rem 0 0.55rem;
-}
-
-.signal-bar {
-  flex: 1 1 0;
-  min-width: 2px;
-  max-width: 12px;
-  background: linear-gradient(to top, rgba(57, 255, 136, 0.28), #39ff88);
-  box-shadow: 0 0 0.55rem rgba(57, 255, 136, 0.2);
-  transform-origin: center;
-  animation: signalMove 1.45s ease-in-out infinite alternate;
-}
-
-.signal-readout {
-  display: flex;
-  justify-content: space-between;
+.welcome-copy {
+  max-width: 49rem;
+  display: grid;
   gap: 1rem;
-  color: rgba(200, 245, 200, 0.48);
-  font-size: 0.68rem;
-  text-transform: uppercase;
 }
 
-@keyframes signalMove {
-  0% { transform: scaleY(0.28); opacity: 0.32; }
-  45% { transform: scaleY(1); opacity: 0.95; }
-  100% { transform: scaleY(0.5); opacity: 0.58; }
-}
-
-@keyframes signalBlink {
-  50% { opacity: 0.25; }
-}
-
-@media (max-width: 480px) {
-  .signal-bars { height: 5rem; }
-  .signal-readout { font-size: 0.58rem; gap: 0.4rem; }
+.welcome-copy p {
+  color: rgba(200, 245, 200, 0.72);
+  line-height: 1.75;
 }
 
 @media (prefers-reduced-motion: reduce) {

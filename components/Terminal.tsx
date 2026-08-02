@@ -12,9 +12,6 @@ export function Terminal() {
   const [cursor, setCursor] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
-  const [booted, setBooted] = useState(false);
-
-  useEffect(() => setBooted(true), []);
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [history]);
@@ -22,6 +19,7 @@ export function Terminal() {
   const focus = () => inputRef.current?.focus();
 
   const prompt = `${profile.handle}@web:~$`;
+  const quickCommands = ['about', 'projects', 'story', 'now', 'contact'];
 
   const submit = (raw: string) => {
     const out = runCommand(raw);
@@ -69,10 +67,26 @@ export function Terminal() {
       className="min-h-screen w-full px-4 sm:px-8 py-6 sm:py-10 max-w-4xl mx-auto animate-flicker"
     >
       <div className="mb-4 text-term-dim text-xs">
-        {profile.handle}.sh — last login: {new Date().toDateString().toLowerCase()}
+        {profile.handle}.sh // last login: {new Date().toDateString().toLowerCase()}
       </div>
 
-      {booted && <div className="mb-6">{welcome}</div>}
+      <div className="mb-5">{welcome}</div>
+
+      <nav aria-label="Quick commands" className="mb-7 flex flex-wrap gap-2">
+        {quickCommands.map((command) => (
+          <button
+            key={command}
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              submit(command);
+            }}
+            className="border border-term-dim/50 px-3 py-1.5 text-sm text-term-accent transition-colors hover:border-term-accent hover:bg-term-accent/10 focus:outline-none focus:ring-1 focus:ring-term-accent"
+          >
+            ./{command}
+          </button>
+        ))}
+      </nav>
 
       {history.map((h, i) => (
         <div key={i} className="mb-3">
@@ -84,7 +98,7 @@ export function Terminal() {
         </div>
       ))}
 
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center border-t border-term-dim/20 pt-4">
         <span className="text-term-accent">{prompt}</span>
         <input
           ref={inputRef}

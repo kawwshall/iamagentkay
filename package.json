@@ -10,7 +10,7 @@
     "deploy": "next build && wrangler pages deploy out --project-name=iamagentkay"
   },
   "dependencies": {
-    "next": "^15.5.4",
+    "next": "^15.5.22",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
@@ -19,9 +19,13 @@
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "autoprefixer": "10.4.20",
-    "postcss": "8.5.1",
+    "postcss": "^8.5.25",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
-    "wrangler": "3.101.0"
+    "wrangler": "^4.118.0"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "0.35.3"
   }
 }

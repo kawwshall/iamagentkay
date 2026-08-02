@@ -10,7 +10,7 @@ const line = (s: ReactNode, key?: string | number) => (
 );
 
 const banner = (
-  <pre className="text-term-accent leading-tight text-[11px] sm:text-sm">
+  <pre className="text-term-accent leading-tight text-[11px] sm:text-sm overflow-x-auto">
 {String.raw` █████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗ █████╗ ██╗   ██╗
 ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██╔══██╗╚██╗ ██╔╝
 ███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ███████║ ╚████╔╝
@@ -21,13 +21,18 @@ const banner = (
 );
 
 export const welcome: CommandResult = (
-  <div className="space-y-2">
+  <div className="space-y-3">
     {banner}
-    <div className="text-term-dim">
-      welcome to <span className="text-term-accent">{profile.handle}.sh</span> — v0.1.0
+    <div>
+      <span className="text-term-fg">{profile.name.toLowerCase()}</span>
+      <span className="text-term-dim"> / {profile.title}</span>
     </div>
+    <div className="max-w-2xl text-term-fg/90">{profile.tagline}</div>
     <div className="text-term-dim">
-      type <span className="text-term-amber">help</span> to see commands.
+      recently: 300+ operators · 27+ cities · 5+ regions · 70,000+ hours delivered
+    </div>
+    <div className="text-term-dim text-sm">
+      use the shortcuts below or type <span className="text-term-amber">help</span>.
     </div>
   </div>
 );
@@ -39,8 +44,9 @@ const commands: Record<string, () => CommandResult> = {
         ['help', 'show this list'],
         ['about', 'who i am'],
         ['whoami', 'quick identity'],
-        ['projects', 'things i shipped'],
-        ['skills', 'stack i work in'],
+        ['projects', 'things i built'],
+        ['story', 'how i got here'],
+        ['skills', 'what i can work with'],
         ['now', 'what i am doing right now'],
         ['contact', 'how to reach me'],
         ['resume', 'link to resume.md'],
@@ -55,7 +61,7 @@ const commands: Record<string, () => CommandResult> = {
     </div>
   ),
 
-  whoami: () => line(`${profile.handle} — ${profile.title} — ${profile.location}`),
+  whoami: () => line(`${profile.handle} / ${profile.title} / ${profile.location}`),
 
   about: () => (
     <div className="space-y-1">
@@ -75,7 +81,7 @@ const commands: Record<string, () => CommandResult> = {
           {p.link && p.link !== '#' && (
             <div className="pl-4">
               <a href={p.link} target="_blank" rel="noreferrer">
-                {p.link}
+                → {p.linkLabel ?? p.link}
               </a>
             </div>
           )}
@@ -98,6 +104,17 @@ const commands: Record<string, () => CommandResult> = {
   now: () => (
     <div className="space-y-1">
       {profile.now.map((l, i) => line(`• ${l}`, i))}
+    </div>
+  ),
+
+  story: () => (
+    <div className="space-y-2">
+      {profile.story.map((item, i) => (
+        <div key={item} className="grid grid-cols-[2rem_1fr] gap-2">
+          <span className="text-term-amber">{String(i + 1).padStart(2, '0')}</span>
+          <span>{item}</span>
+        </div>
+      ))}
     </div>
   ),
 
@@ -144,6 +161,7 @@ export function runCommand(input: string): CommandResult {
   if (!cmd) return null;
   if (cmd === 'clear') return '__CLEAR__';
   if (cmd === 'ls') return commands.help();
+  if (cmd === 'work' || cmd === 'proof') return commands.projects();
   if (cmd in commands) return commands[cmd]();
   if (cmd === 'sudo rm -rf /') {
     return <span className="text-term-red">nice try.</span>;
@@ -156,6 +174,6 @@ export function runCommand(input: string): CommandResult {
 }
 
 export const availableCommands = [
-  'help', 'about', 'whoami', 'projects', 'skills',
+  'help', 'about', 'whoami', 'projects', 'story', 'skills',
   'now', 'contact', 'social', 'resume', 'clear',
 ];

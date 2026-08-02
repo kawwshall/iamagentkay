@@ -28,11 +28,14 @@ export const welcome: CommandResult = (
       <span className="text-term-dim"> / {profile.title}</span>
     </div>
     <div className="max-w-2xl text-term-fg/90">{profile.tagline}</div>
+    <div className="max-w-2xl text-term-dim">
+      i think passion follows art. the work comes first. the feeling usually shows up late.
+    </div>
     <div className="text-term-dim">
-      recently: 300+ operators · 27+ cities · 5+ regions · 70,000+ hours delivered
+      currently entertaining a few delusions of grandeur from goa.
     </div>
     <div className="text-term-dim text-sm">
-      use the shortcuts below or type <span className="text-term-amber">help</span>.
+      click something below. or type <span className="text-term-amber">help</span>. worst case, the terminal complains.
     </div>
   </div>
 );

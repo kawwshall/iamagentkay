@@ -16,10 +16,7 @@ export const welcome: CommandResult = (
       {profile.tagline}
     </h1>
     <p>
-      that has been the pattern so far. i have moved through coffee, theatre, code, field operations and now jazz, and none of it was planned particularly well. i usually enter because i am curious, stay because the work starts getting interesting, and then build something because i cannot stop thinking about how badly the current thing works.
-    </p>
-    <p>
-      i still believe passion follows art. you do the work first, often badly, and somewhere in the middle it begins to matter. right now i am in goa, learning jazz, building whatever keeps bothering me and holding on to a few delusions of grandeur because life is boring without them.
+      i rarely begin with a grand plan. usually something catches my attention, i stay with it longer than expected, and eventually i care enough to make something. i think passion follows art. the work comes first, often badly. the feeling catches up later.
     </p>
     <p className="text-term-dim text-sm">
       you can click around if you want, or type <span className="text-term-amber">help</span>. it is just a website. nothing sacred here.

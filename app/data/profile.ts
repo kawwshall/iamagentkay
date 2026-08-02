@@ -12,10 +12,10 @@ export const profile = {
   },
   about: [
     "i'm kay. i do not have a clean story for how i got here because, honestly, it was never clean.",
-    'i have served coffee, taught javascript, anchored in hindi, acted on stage, run field operations and built software in the gaps. some of it was planned. most of it was me saying yes and then learning fast enough to survive the decision.',
+    'i have never been especially good at staying in one lane. something feels alive, i get curious, and before long i am far enough inside it that leaving would be less interesting than continuing.',
     'the only pattern i trust is that i like getting close to the real work. once i understand it, i start seeing things that should exist but do not, and then it gets difficult not to build them.',
-    'i do not know what the one big thing is yet, and i am not going to package that uncertainty as some grand vision. i am just taking the questions seriously enough to follow them.',
-    'right now i am in goa, learning jazz, making things and keeping a few delusions of grandeur around because life gets boring without them.',
+    'i am not trying to turn every detour into a heroic origin story. some choices worked, some were strange, and a few only made sense much later.',
+    'i do keep a few delusions of grandeur around. life gets boring without them.',
   ],
   skills: {
     build: ['JavaScript', 'TypeScript', 'Python', 'React', 'React Native', 'Next.js'],
@@ -57,9 +57,9 @@ export const profile = {
     'i served coffee at starbucks for a while. it made me fast with my hands and much calmer when ten things were going wrong at once.',
     'around the same years i taught javascript and react native, did a short hindi anchor stint, acted in plays, ran events and spent a surprising amount of time convincing people to show up.',
     'later i joined a field data project as an operator. somehow that turned into managing work across a lot of cities, but the useful part was doing nearly every layer myself before trying to lead anyone else.',
-    'a few of the tools on this site came from that time because our chats and spreadsheets were slowly losing the plot, and complaining about them was becoming less interesting than building something better.',
+    'that period also changed my relationship with software. it stopped being a subject i knew and became a way to help the people working beside me.',
     'i was also a referee for a fire and rescue robotics game at bykm 2026, which sounds made up whenever i write it down, but it happened.',
-    'i studied hindustani classical vocals and now i am learning jazz, where every attempt to bluff becomes audible immediately.',
+    'i studied hindustani classical vocals. learning to listen properly probably mattered more than learning to sing.',
   ],
   now: [
     'i am learning jazz at goa jazz academy and it is rearranging parts of my brain in ways i did not expect.',

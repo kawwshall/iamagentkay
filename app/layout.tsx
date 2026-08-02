@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'agent kay',
-    description: 'Passion follows art. Obsession follows repetition. The rest is noise.',
+    description: 'I enter unfamiliar systems, learn the real work, and build what is missing.',
   },
 };
 

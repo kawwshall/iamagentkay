@@ -9,33 +9,47 @@ const line = (s: ReactNode, key?: string | number) => (
   </div>
 );
 
-const banner = (
-  <pre className="text-term-accent leading-tight text-[11px] sm:text-sm overflow-x-auto">
-{String.raw` █████╗  ██████╗ ███████╗███╗   ██╗████████╗██╗  ██╗ █████╗ ██╗   ██╗
-██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝██║ ██╔╝██╔══██╗╚██╗ ██╔╝
-███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   █████╔╝ ███████║ ╚████╔╝
-██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   ██╔═██╗ ██╔══██║  ╚██╔╝
-██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   ██║  ██╗██║  ██║   ██║
-╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   `}
-  </pre>
+const signalHeights = [28, 44, 72, 36, 58, 88, 48, 66, 32, 78, 52, 94, 42, 62, 84, 38, 70, 50, 90, 46, 76, 34, 60, 82];
+
+const signal = (
+  <div className="signal-shell" aria-label="A live animated signal moving from curiosity through work into art">
+    <div className="signal-status">
+      <span className="signal-dot" aria-hidden="true" />
+      signal / unstable but alive
+    </div>
+    <div className="signal-bars" aria-hidden="true">
+      {signalHeights.map((height, index) => (
+        <span
+          key={`${height}-${index}`}
+          className="signal-bar"
+          style={{ height: `${height}%`, animationDelay: `-${index * 83}ms` }}
+        />
+      ))}
+    </div>
+    <div className="signal-readout">
+      <span>input / curiosity</span>
+      <span>process / work</span>
+      <span>output / art</span>
+    </div>
+  </div>
 );
 
 export const welcome: CommandResult = (
   <div className="space-y-3">
-    {banner}
+    {signal}
     <div>
       <span className="text-term-fg">{profile.name.toLowerCase()}</span>
       <span className="text-term-dim"> / {profile.title}</span>
     </div>
     <div className="max-w-2xl text-term-fg/90">{profile.tagline}</div>
     <div className="max-w-2xl text-term-dim">
-      i think passion follows art. the work comes first. the feeling usually shows up late.
+      no grand theory. no polished origin story. just work, repetition and whatever survives both.
     </div>
     <div className="text-term-dim">
-      currently entertaining a few delusions of grandeur from goa.
+      passion follows art. obsession follows repetition. the rest is noise.
     </div>
     <div className="text-term-dim text-sm">
-      click something below. or type <span className="text-term-amber">help</span>. worst case, the terminal complains.
+      delusions of grandeur: active. evidence: loading. type <span className="text-term-amber">help</span> or pick a route.
     </div>
   </div>
 );

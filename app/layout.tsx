@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'agentkay // kaushal raj',
-  description: 'Kaushal Raj. Making things, learning jazz and mostly figuring it out from Goa.',
+  title: 'agent kay',
+  description: 'Agent Kay. I enter unfamiliar systems, learn the real work, and build what is missing.',
   openGraph: {
-    title: 'agentkay // kaushal raj',
-    description: 'Making small tools, following curiosity and carrying a few delusions of grandeur.',
+    title: 'agent kay',
+    description: 'I enter unfamiliar systems, learn the real work, and build what is missing.',
     url: 'https://iamagentkay.com/',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'agentkay // kaushal raj',
-    description: 'Making things, learning jazz and mostly figuring it out from Goa.',
+    title: 'agent kay',
+    description: 'Passion follows art. Obsession follows repetition. The rest is noise.',
   },
 };
 

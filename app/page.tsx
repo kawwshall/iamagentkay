@@ -6,7 +6,7 @@ export default function Home() {
     <main className="portfolio">
       <section aria-labelledby="about">
         <h1 id="about">About Kaushal</h1>
-        <p>I’m Kaushal Raj, also known as agentkay. I build practical web apps and AI tools. Based in {profile.location}.</p>
+        <p>I’m Kaushal Raj, also known as agentkay. I build and ship web applications and AI tools. Based in {profile.location}.</p>
         <p>I’m looking for an AI generalist role where I can build tools, connect systems, and help people use them.</p>
       </section>
 
@@ -31,11 +31,11 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="tools">
-        <h2 id="tools">Tools</h2>
+        <h2 id="tools">Stack</h2>
         <dl className="skills">
-          <div><dt>Languages</dt><dd>{profile.skills.languages.join(', ')}</dd></div>
-          <div><dt>Interfaces</dt><dd>{profile.skills.frontend.join(', ')}</dd></div>
-          <div><dt>Build & ship</dt><dd>{profile.skills.tools.join(', ')}</dd></div>
+          {Object.entries(profile.skills).map(([category, items]) => (
+            <div key={category}><dt>{category}</dt><dd>{items.join(', ')}</dd></div>
+          ))}
         </dl>
       </section>
 

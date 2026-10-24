@@ -3,7 +3,7 @@ export const profile = {
   handle: 'agentkay',
   title: 'Software developer',
   tagline: 'Useful software. Built around real problems.',
-  description: 'I build practical web apps and AI tools.',
+  description: 'I build and ship web applications and AI tools.',
   location: 'Indore, India',
   email: 'beingkaushal01@gmail.com',
   links: {
@@ -11,9 +11,11 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/kaushal-339345266/',
   },
   skills: {
-    languages: ['TypeScript', 'JavaScript', 'Python'],
-    frontend: ['React', 'Next.js', 'React Native', 'Tailwind CSS'],
-    tools: ['Cloudflare', 'Vercel', 'ffmpeg', 'Whisper'],
+    Languages: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
+    Apps: ['React', 'Next.js', 'React Native', 'Expo'],
+    AI: ['OpenAI API', 'Structured outputs', 'API integrations'],
+    Data: ['SQLite', 'Cloudflare D1', 'Drizzle'],
+    Deploy: ['Cloudflare Workers', 'Cloudflare Pages', 'Vercel'],
   },
   projects: [
     {
@@ -30,7 +32,7 @@ export const profile = {
       summary: 'Prepaid session tracking',
       category: 'Session tracking',
       blurb: 'Session tracking for independent trainers and teachers. Tracks prepaid sessions and helps them follow up when clients need to renew.',
-      stack: ['TypeScript', 'Next.js', 'SQLite', 'Drizzle', 'Resend'],
+      stack: ['TypeScript', 'Next.js', 'Cloudflare D1', 'Drizzle', 'Resend'],
       link: 'https://github.com/kawwshall/notch',
       live: 'https://notch.beingkaushal01.workers.dev/',
     },

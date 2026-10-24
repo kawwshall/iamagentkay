@@ -3,17 +3,17 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Kaushal Raj — Software & AI Tools',
-  description: 'Kaushal Raj builds web applications and practical tools for AI assistants and field operations.',
+  description: 'Kaushal Raj builds practical web apps and AI tools.',
   openGraph: {
     title: 'Kaushal Raj — Software & AI Tools',
-    description: 'Kaushal Raj builds web applications and practical tools for AI assistants and field operations.',
+    description: 'Kaushal Raj builds practical web apps and AI tools.',
     url: 'https://iamagentkay.com/',
     type: 'website',
   },
   twitter: {
     card: 'summary',
     title: 'Kaushal Raj — Software & AI Tools',
-    description: 'Kaushal Raj builds web applications and practical tools for AI assistants and field operations.',
+    description: 'Kaushal Raj builds practical web apps and AI tools.',
   },
 };
 

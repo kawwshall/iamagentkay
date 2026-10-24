@@ -6,7 +6,7 @@ export default function Home() {
     <main className="portfolio">
       <section aria-labelledby="about">
         <h1 id="about">About Kaushal</h1>
-        <p>I’m Kaushal Raj, also known as agentkay. I build software and tools for everyday work, from AI assistants to field operations. Based in {profile.location}.</p>
+        <p>I’m Kaushal Raj, also known as agentkay. I build practical web apps and AI tools. Based in {profile.location}.</p>
         <p>I’m looking for an AI generalist role where I can build tools, connect systems, and help people use them.</p>
       </section>
 
@@ -26,7 +26,8 @@ export default function Home() {
       <section aria-labelledby="experience">
         <h2 id="experience">Experience</h2>
         <p>Operations Tech Lead at <a href="https://www.build.ai/" target="_blank" rel="noreferrer">Build AI</a> <span className="detail">· March–August 2026</span></p>
-        <p>Built internal tools, created <a href="https://zkits.vercel.app/" target="_blank" rel="noreferrer">ZKits equipment guides</a>, and trained field teams on an AI data collection project. Led operations across 25+ cities and 300+ operators, supporting the collection of 70,000+ hours of training data.</p>
+        <p>Joined as an operator and grew into the lead role. Built internal tools, created <a href="https://zkits.vercel.app/" target="_blank" rel="noreferrer">ZKits equipment guides</a>, and trained field teams on an AI data collection project. Led operations across 25+ cities and 300+ operators, supporting the collection of 70,000+ hours of training data.</p>
+        <p>Earlier work includes web development at Faayo, teaching JavaScript at Chai &amp; Code, and supporting a Solidity workshop at IIT Madras CyStar.</p>
       </section>
 
       <section aria-labelledby="tools">

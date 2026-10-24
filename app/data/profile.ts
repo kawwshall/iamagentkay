@@ -3,7 +3,7 @@ export const profile = {
   handle: 'agentkay',
   title: 'Software developer',
   tagline: 'Useful software. Built around real problems.',
-  description: 'I build web applications and tools that simplify everyday work — from AI assistants to field operations.',
+  description: 'I build practical web apps and AI tools.',
   location: 'Indore, India',
   email: 'beingkaushal01@gmail.com',
   links: {

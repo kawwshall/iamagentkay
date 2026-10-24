@@ -37,7 +37,7 @@ const commands: Record<string, () => CommandResult> = {
   ),
   experience: () => (
     <div>
-      <div>Operations Tech Lead · Build AI · Mar–Aug 2026</div>
+      <div>Operations Tech Lead · Build AI · Mar-Aug 2026</div>
       <div className="text-term-dim">Started as an operator; built tools, trained teams, and grew into the lead role.</div>
     </div>
   ),

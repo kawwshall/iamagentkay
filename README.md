@@ -1,45 +1,25 @@
 # iamagentkay
 
-Terminal-style portfolio for **kaushal raj / agentkay**.
-Next.js 15 · Tailwind · static export · deployed on Cloudflare Pages.
+Kaushal Raj’s minimal developer portfolio, with an alternate terminal view at `/terminal`. Built with Next.js 15, React, TypeScript, and Tailwind CSS, with static export for Cloudflare Pages.
 
-## Local dev
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000 and type `help` in the terminal.
+Open http://localhost:3000. Edit projects, skills, and contact details in `app/data/profile.ts`; the homepage lives in `app/page.tsx`, terminal commands live in `components/commands.tsx` and styling in `app/globals.css`.
 
-## Edit content
-
-All content lives in one file: [`app/data/profile.ts`](app/data/profile.ts).
-Change your name, links, projects, and skills there — the terminal picks it up.
-
-The resume lives in [`resume.md`](resume.md). Keep it in sync with `public/resume.md`
-(the copy served at `/resume.md` on the deployed site).
-
-## Deploy to Cloudflare Pages
-
-**First time:**
+## Build and deploy
 
 ```bash
-npx wrangler login
-npx wrangler pages project create iamagentkay --production-branch=main
-```
-
-**Every deploy:**
-
-```bash
+npm run build
 npm run deploy
 ```
 
-That runs `next build` (which emits static files to `out/`) and pushes with
-`wrangler pages deploy out --project-name=iamagentkay`.
+The build exports to `out/`. Deployment targets the Cloudflare Pages project `iamagentkay` and requires an authenticated Wrangler session.
 
-## Commands available in the terminal
+## Resume sources
 
-`help` · `about` · `whoami` · `projects` · `skills` · `now` · `contact` · `resume` · `social` · `clear`
-
-Tab-completes command names. Up/down cycles history.
+`resume.md`, `public/resume.md`, and `resume.tex` are maintained separately from the portfolio.

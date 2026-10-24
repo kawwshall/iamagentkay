@@ -18,10 +18,11 @@ export function Terminal() {
 
   const focus = () => inputRef.current?.focus();
 
-  const prompt = `${profile.handle}@web:~$`;
-  const quickCommands = ['about', 'projects', 'story', 'now', 'contact'];
+  const prompt = `${profile.handle}:~$`;
+  const quickCommands = ['projects', 'experience', 'contact', 'help'];
 
   const submit = (raw: string) => {
+    if (!raw.trim()) return;
     const out = runCommand(raw);
     if (out === '__CLEAR__') {
       setHistory([]);
@@ -64,11 +65,11 @@ export function Terminal() {
   return (
     <div
       onClick={focus}
-      className="min-h-screen w-full px-4 sm:px-8 py-6 sm:py-10 max-w-4xl mx-auto animate-flicker"
+      className="w-full px-4 sm:px-8 py-6 max-w-2xl mx-auto text-sm leading-relaxed"
     >
       <div className="mb-5">{welcome}</div>
 
-      <nav aria-label="Quick commands" className="mb-7 flex flex-wrap gap-2">
+      <nav aria-label="Quick commands" className="mb-6 flex flex-wrap gap-x-4 gap-y-2">
         {quickCommands.map((command) => (
           <button
             key={command}
@@ -77,9 +78,9 @@ export function Terminal() {
               event.stopPropagation();
               submit(command);
             }}
-            className="border border-term-dim/50 px-3 py-1.5 text-sm text-term-accent transition-colors hover:border-term-accent hover:bg-term-accent/10 focus:outline-none focus:ring-1 focus:ring-term-accent"
+            className="text-term-dim hover:text-term-accent focus-visible:outline focus-visible:outline-1 focus-visible:outline-term-accent"
           >
-            ./{command}
+            {command}
           </button>
         ))}
       </nav>
@@ -102,7 +103,7 @@ export function Terminal() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={onKeyDown}
-          className="flex-1 bg-transparent border-0 outline-none text-term-fg caret-term-accent"
+          className="min-w-0 flex-1 bg-transparent border-0 outline-none text-term-fg caret-term-accent"
           spellCheck={false}
           autoComplete="off"
           aria-label="terminal input"

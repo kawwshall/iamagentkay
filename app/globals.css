@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+.terminal-surface {
   background: #0a0e0a;
   color: #c8f5c8;
   font-family: ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, monospace;
@@ -62,5 +62,55 @@ button { cursor: pointer; }
   z-index: 51;
 }
 
-a { color: #39ff88; text-decoration: none; }
+.terminal-surface a { color: #39ff88; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/eb-garamond-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/eb-garamond-semibold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600 800;
+  font-display: swap;
+}
+html { color-scheme: dark; background: #121212; }
+body { margin: 0; background: #121212; color: #e8e8e8; }
+.portfolio {
+  width: 100%;
+  max-width: 672px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+.portfolio section + section { margin-top: 28px; }
+.portfolio h1, .portfolio h2, .portfolio h3 { font: inherit; font-weight: 600; margin: 0 0 5px; }
+.portfolio p { margin: 0; }
+.portfolio p + p { margin-top: 12px; }
+.portfolio a { color: #aec4e5; text-decoration: underline; text-underline-offset: 2px; }
+.portfolio a:hover { color: #e8e8e8; }
+.portfolio a:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+.portfolio article + article { margin-top: 15px; }
+.portfolio article h3 { margin-bottom: 0; }
+.portfolio .detail { color: #aaa; }
+.portfolio .skills { margin: 0; }
+.portfolio .skills div { display: grid; grid-template-columns: 83px 1fr; gap: 12px; }
+.portfolio .skills div + div { margin-top: 5px; }
+.portfolio dt, .portfolio dd { margin: 0; }
+.portfolio footer { margin-top: 35px; color: #aaa; font-size: 14px; }
+.portfolio footer a { color: inherit; }
+.portfolio ::selection { background: #e8e8e8; color: #121212; }
+@media (max-width: 480px) {
+  .portfolio { padding-top: 26px; }
+  .portfolio .skills div { grid-template-columns: 72px 1fr; gap: 8px; }
+}
+
+.portfolio .project-code { margin-left: 12px; font-size: 14px; font-weight: 400; color: #aaa; }

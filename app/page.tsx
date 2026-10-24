@@ -25,7 +25,7 @@ export default function Home() {
 
       <section aria-labelledby="experience">
         <h2 id="experience">Experience</h2>
-        <p>Operations Tech Lead at <a href="https://www.build.ai/" target="_blank" rel="noreferrer">Build AI</a> <span className="detail">· March-August 2026</span></p>
+        <p>Operations Tech Lead at <a href="https://x.com/buildpbc" target="_blank" rel="noreferrer">Build AI</a> <span className="detail">· March-August 2026</span></p>
         <p>Joined as an operator and grew into the lead role. Built internal tools, created <a href="https://zkits.vercel.app/" target="_blank" rel="noreferrer">ZKits equipment guides</a>, and trained field teams on an AI data collection project. Led operations across 25+ cities and 300+ operators, supporting the collection of 70,000+ hours of training data.</p>
         <p>Earlier work includes web development at Faayo, teaching JavaScript at Chai &amp; Code, and supporting a Solidity workshop at IIT Madras CyStar.</p>
       </section>

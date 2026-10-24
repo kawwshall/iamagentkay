@@ -6,7 +6,7 @@ export default function Home() {
     <main className="portfolio">
       <section aria-labelledby="about">
         <h1 id="about">About Kaushal</h1>
-        <p>I’m Kaushal Raj, also known as agentkay, a developer based in {profile.location}. My work involves building and shipping web applications and AI tools.</p>
+        <p>I’m Kaushal Raj, also known as agentkay, a developer currently based in {profile.location}. My work involves building and shipping web applications and AI tools.</p>
         <p>Open to AI generalist roles that involve building tools, connecting systems, and helping teams use them.</p>
       </section>
 

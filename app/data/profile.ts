@@ -13,9 +13,11 @@ export const profile = {
   skills: {
     Languages: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
     Apps: ['React', 'Next.js', 'React Native', 'Expo'],
-    AI: ['OpenAI API', 'Structured outputs', 'API integrations'],
-    Data: ['SQLite', 'Cloudflare D1', 'Drizzle'],
-    Deploy: ['Cloudflare Workers', 'Cloudflare Pages', 'Vercel'],
+    Backend: ['Node.js', 'FastAPI', 'Flask'],
+    AI: ['OpenAI API', 'Gemini API', 'Ollama'],
+    Data: ['PostgreSQL', 'Supabase', 'SQLite', 'Cloudflare D1'],
+    Delivery: ['Cloudflare', 'Vercel', 'GitHub Actions'],
+    Testing: ['pytest', 'Jest'],
   },
   projects: [
     {
